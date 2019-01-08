@@ -1,9 +1,14 @@
 // Code your solution in this file
 const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
 
-function findMatching(name){
-  newdrivers = drivers.filter(dname => dname === name)
-  return newdrivers
+function findMatching(drivers, name){
+  return drivers.filter(driver => driver.toLowerCase() === name.toLowerCase())
 }
 
-findMatching("Bobby")
+function fuzzyMatch(drivers, letters) {
+  return drivers.filter(driver => driver.startsWith(letters));
+}
+
+function matchName(drivers, name) {
+  return drivers.filter(driver => driver.name === name);
+}
